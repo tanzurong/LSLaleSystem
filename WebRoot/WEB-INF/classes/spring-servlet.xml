@@ -16,8 +16,7 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd
         http://www.springframework.org/schema/mvc
-        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-        
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">      
         <!-- 以annotation的方式，装配controller -->
         <mvc:annotation-driven/>
         <!-- spring扫描包下所有的类，让标注spring注解的类生效 -->
@@ -34,7 +33,7 @@
 		<mvc:resources location="/statics/" mapping="/statics/**"/>
 		
 		<!-- 配置文件上传 -->
-		<bean id="multiPartResolver" class="org.springframework.web.multipart.commons.CommonsMultiPartResolver">
+		<bean id="multiPartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 			<property name="maxUploadSize" value="500000"/>
 		</bean>
 		
